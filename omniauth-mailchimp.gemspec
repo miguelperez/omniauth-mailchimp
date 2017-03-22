@@ -21,4 +21,8 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency 'rspec', '~> 2.6.0'
   gem.add_development_dependency 'rake'
+
+  gem.cert_chain  = ['certs/stevenkaras.pem']
+  gem.signing_key = File.expand_path("~/.ssh/gem-private_key.pem") if $0 =~ /gem\z/
+
 end

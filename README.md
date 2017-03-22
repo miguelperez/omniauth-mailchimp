@@ -1,4 +1,4 @@
-# Mailchimp Strategie
+# Mailchimp Strategy
 
 MailChimp OAuth2 strategy for OmniAuth 1.0
 
