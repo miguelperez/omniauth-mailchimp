@@ -4,11 +4,11 @@ require File.expand_path('../lib/omniauth/mailchimp/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.add_dependency 'omniauth', '~> 1.0'
 
-  gem.authors = ["Florian Mhun"]
-  gem.email = ["florian.mhun@gmail.com"]
+  gem.authors = ["Steven Karas", "Florian Mhun"]
+  gem.email = ["steven.karas@gmail.com", "florian.mhun@gmail.com"]
   gem.description = %q{MailChimp OAuth2 strategy for OmniAuth 1.0}
   gem.summary = %q{MailChimp OAuth2 strategy for OmniAuth 1.0.}
-  gem.homepage = "https://github.com/floomoon/omniauth-mailchimp"
+  gem.homepage = "https://github.com/stevenkaras/omniauth-mailchimp"
 
   gem.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files = `git ls-files`.split("\n")
