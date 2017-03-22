@@ -1,8 +1,8 @@
-#Mailchimp Strategie
+# Mailchimp Strategie
 
 MailChimp OAuth2 strategy for OmniAuth 1.0
 
-#License
+# License
 
 Copyright (c) 2011 Florian Mhun
 
