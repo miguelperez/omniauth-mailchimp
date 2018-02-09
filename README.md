@@ -8,62 +8,44 @@ http://developer.mailchimp.com/documentation/mailchimp/guides/how-to-use-oauth2/
 
 # Auth Hash
 
+JSON as per https://us9.api.mailchimp.com/schema/3.0/Root.json
+
 ```ruby
-{"user_id"=>String,
+
+{"account_id"=>String,
+ "login_id"=>String,
+ "account_name"=>String,
+ "email"=>String,
+ "first_name"=>String,
+ "last_name"=>String,
  "username"=>String,
+ "avatar_url"=>String,
+ "role"=>String,
  "member_since"=>String,
- "is_approved"=>Boolean,
- "is_trial"=>Boolean,
- "has_activated"=>Boolean,
- "timezone"=>String,
- "plan_type"=>String,
- "plan_high"=>Integer,
- "plan_low"=>Integer,
- "plan_start_date"=>String,
- "pending_monthly"=>Boolean,
+ "pricing_plan_type"=>String,
  "first_payment"=>String,
- "last_payment"=>String,
- "times_logged_in"=>Integer,
- "last_login"=>String,
- "affiliate_link"=>String,
- "industry"=>String,
+ "account_timezone"=>String,
+ "account_industry"=>String,
  "contact"=>
-  {"fname"=>String,
-   "lname"=>String,
-   "email"=>String,
-   "company"=>String,
-   "address1"=>String,
-   "address2"=>String,
+  {"company"=>String,
+   "addr1"=>String,
+   "addr2"=>String,
    "city"=>String,
    "state"=>String,
    "zip"=>String,
-   "country"=>String,
-   "url"=>String,
-   "phone"=>String,
-   "fax"=>String?},
- "modules"=>[],
- "orders"=>
-  [{"order_id"=>Integer,
-    "type"=>String,
-    "amount"=>Integer|Float,
-    "date"=>String,
-    "credits_used"=>Integer|Float}],
- "rewards"=>
-  {"referrals_this_month"=>Integer,
-   "notify_on"=>Boolean,
-   "notify_email"=>String?,
-   "credits"=>
-    {"this_month"=>Integer, "total_earned"=>Integer, "remaining"=>Integer},
-   "inspections"=>
-    {"this_month"=>Integer, "total_earned"=>Integer, "remaining"=>Integer},
-   "referrals"=>[],
-   "applied"=>
-    [{"value"=>Integer,
-      "date"=>String,
-      "order_id"=>Integer,
-      "order_desc"=>String}]},
- "integrations"=>[]
-}
+   "country"=>String},
+ "pro_enabled"=>FalseClass,
+ "last_login"=>String,
+ "total_subscribers"=>Integer,
+ "industry_stats"=>
+  {"open_rate"=>Float, "bounce_rate"=>Float, "click_rate"=>Float},
+ "_links"=>
+  [{"rel"=>String, "href"=>String, "method"=>String, "targetSchema"=>String},
+   {"rel"=>String,
+    "href"=>String,
+    "method"=>String,
+    "targetSchema"=>String,
+    "schema"=>String}]}
 ```
 
 # License

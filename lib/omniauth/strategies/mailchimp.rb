@@ -20,16 +20,14 @@ module OmniAuth
       end
 
       uid {
-        raw_info["user_id"]
+        raw_info["account_id"]
       }
 
       info do
-        contact = raw_info["contact"] || {}
-
         {
-          :first_name => contact["fname"],
-          :last_name => contact["lname"],
-          :email => contact["email"]
+          :first_name => raw_info["first_name"],
+          :last_name => raw_info["last_name"],
+          :email => raw_info["email"],
         }
       end
 
@@ -45,7 +43,6 @@ module OmniAuth
         @raw_info ||= begin
           data = user_data
           endpoint = data["api_endpoint"]
-          apikey = "#{@access_token.token}-#{data['dc']}"
           response = @access_token.get("#{endpoint}/3.0/").parsed
           if response["error"]
             case response["code"]
