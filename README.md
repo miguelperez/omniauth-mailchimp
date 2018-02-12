@@ -11,7 +11,6 @@ http://developer.mailchimp.com/documentation/mailchimp/guides/how-to-use-oauth2/
 JSON as per https://us9.api.mailchimp.com/schema/3.0/Root.json
 
 ```ruby
-
 {"account_id"=>String,
  "login_id"=>String,
  "account_name"=>String,
@@ -34,18 +33,17 @@ JSON as per https://us9.api.mailchimp.com/schema/3.0/Root.json
    "state"=>String,
    "zip"=>String,
    "country"=>String},
- "pro_enabled"=>FalseClass,
+ "pro_enabled"=>Boolean,
  "last_login"=>String,
  "total_subscribers"=>Integer,
  "industry_stats"=>
   {"open_rate"=>Float, "bounce_rate"=>Float, "click_rate"=>Float},
  "_links"=>
-  [{"rel"=>String, "href"=>String, "method"=>String, "targetSchema"=>String},
-   {"rel"=>String,
+  [{"rel"=>String,
     "href"=>String,
     "method"=>String,
     "targetSchema"=>String,
-    "schema"=>String}]}
+    "schema"=>String?}]}
 ```
 
 # License
