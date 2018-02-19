@@ -27,8 +27,8 @@ module OmniAuth
         {
           :first_name => raw_info["first_name"],
           :last_name => raw_info["last_name"],
-          :email => raw_info["email"],
           :nickname => user_data["accountname"],
+          :email => user_data.fetch("login", {})["email"] || raw_info["email"],
           :image => raw_info["avatar_url"],
         }
       end
@@ -43,8 +43,7 @@ module OmniAuth
 
       def raw_info
         @raw_info ||= begin
-          data = user_data
-          endpoint = data["api_endpoint"]
+          endpoint = user_data["api_endpoint"]
           response = @access_token.get("#{endpoint}/3.0/").parsed
           if response["error"]
             case response["code"]
