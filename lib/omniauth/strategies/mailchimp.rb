@@ -41,6 +41,14 @@ module OmniAuth
         }
       end
 
+      def callback_url
+        if options.full_host
+          options.full_host + script_name + callback_path + query_string
+        else
+          super
+        end
+      end
+
       def raw_info
         @raw_info ||= begin
           endpoint = user_data["api_endpoint"]
