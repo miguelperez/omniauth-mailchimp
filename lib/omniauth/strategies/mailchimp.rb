@@ -43,7 +43,7 @@ module OmniAuth
 
       def callback_url
         if options.full_host
-          options.full_host + script_name + callback_path + query_string
+          options.full_host + script_name + callback_path
         else
           super
         end
